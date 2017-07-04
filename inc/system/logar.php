@@ -9,7 +9,6 @@
 
 	$con = pg_connect("host=localhost port=5432 dbname=aula user=postgres password=123");
 	$q = pg_query( $con, "SELECT * FROM agenda WHERE email='$email' AND password='$password'" );
-		    $q = "INSERT INTO users (name, email, passwrd) VALUES ('Rômulo', '$email', '$senha')";
 	$cont = pg_num_rows($q);
 	
 	if( $cont > 0 ){
